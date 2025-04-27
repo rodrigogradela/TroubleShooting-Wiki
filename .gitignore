@@ -1,0 +1,44 @@
+# Node.js e dependências
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Arquivos de build do frontend (React)
+frontend/dist/
+frontend/build/
+
+# Arquivos de ambiente
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Arquivos de upload (não queremos subir os arquivos dos usuários)
+backend/pptx_files/
+
+# Arquivos temporários e logs
+*.log
+*.log.*
+.DS_Store
+Thumbs.db
+
+# Arquivos de IDE/Editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Arquivos de testes e cobertura
+coverage/
+*.lcov
+
+# Arquivos gerados pelo sistema operacional
+*.swp
+*.swo
+*~
+
+# Outros arquivos desnecessários
+*.bak
+*.tmp
+*.temp
