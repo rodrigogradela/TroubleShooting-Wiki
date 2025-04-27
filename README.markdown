@@ -1,4 +1,4 @@
-# Bridgestone Troubleshooting Wiki
+# Troubleshooting Wiki
 
 O **Troubleshooting Wiki** é uma aplicação web que permite aos usuários carregar, pesquisar e exportar documentos relacionados a soluções de problemas (troubleshooting). A aplicação suporta arquivos `.pptx`, `.pptm` e `.docx`, oferece busca por palavras-chave, exportação de resultados em PDF e notificações de sucesso ou falha.
 
