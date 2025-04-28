@@ -72,16 +72,16 @@ app.get('/export/pdf', async (req, res) => {
     const results = await searchFiles(query, pptxDir);
     console.log(`Search results for PDF export: ${results.length} items`);
     const pdfBuffer = await generatePDF(results);
-    console.log('PDF generated successfully');
+    console.log('PDF gerado com sucesso');
     res.set({
       'Content-Type': 'application/pdf',
       'Content-Disposition': `attachment; filename="search_results_${query}.pdf"`
     });
     res.send(pdfBuffer);
   } catch (error) {
-    console.error(`Error generating PDF: ${error.message}`);
+    console.error(`Erro ao gerar PDF: ${error.message}`);
     console.error(error.stack);
-    res.status(500).json({ error: 'Error generating PDF' });
+    res.status(500).json({ error: 'Erro ao Gerar PDF' });
   }
 });
 
@@ -108,12 +108,12 @@ app.get('/export/csv', async (req, res) => {
 app.post('/upload', upload.single('file'), (req, res) => {
   try {
     if (!req.file) {
-      return res.status(400).json({ error: 'No file uploaded or invalid file format' });
+      return res.status(400).json({ error: 'Erro no upload do arquivo ou formato de arquivo invalido' });
     }
-    res.status(200).json({ message: 'File uploaded successfully', filename: req.file.filename });
+    res.status(200).json({ message: 'Upload de arquivo feito com sucesso!!!', filename: req.file.filename });
   } catch (error) {
-    console.error(`Error uploading file: ${error.message}`);
-    res.status(500).json({ error: 'Error uploading file' });
+    console.error(`Erro ao fazer upload do arquivo: ${error.message}`);
+    res.status(500).json({ error: 'Erro ao fazer upload do arquivo' });
   }
 });
 

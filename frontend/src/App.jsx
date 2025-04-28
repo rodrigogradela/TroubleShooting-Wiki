@@ -75,7 +75,7 @@ function App() {
       link.click();
       document.body.removeChild(link);
       window.URL.revokeObjectURL(url); // Liberar o URL criado
-      toast.success('PDF exported successfully!');
+      toast.success('PDF exportado com sucesso!');
     } catch (err) {
       console.error('Error exporting PDF:', err);
       toast.error('Failed to export PDF.');
@@ -105,13 +105,13 @@ function App() {
           'Content-Type': 'multipart/form-data'
         }
       });
-      toast.success('File uploaded successfully!');
+      toast.success('Upload do arquivo feito com sucesso!');
       // Limpar o input
       if (fileInputRef.current) {
         fileInputRef.current.value = '';
       }
     } catch (err) {
-      toast.error('Failed to upload file.');
+      toast.error('Falha ao fazer upload do arquivo.');
     }
   };
 
@@ -123,7 +123,7 @@ function App() {
       <header className="p-4 bg-bridgestone-gray shadow-md">
         <div className="header-left">
           <img src="/bridgestone-logo.png" alt="Bridgestone Logo" className="h-10" />
-          <h1 className="text-xl font-bold text-bridgestone-black">Bridgestone Troubleshooting Wiki</h1>
+          <h1 className="text-xl font-bold text-bridgestone-black">Troubleshooting Wiki</h1>
         </div>
       </header>
 
@@ -176,7 +176,7 @@ function App() {
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Enter search term..."
+            placeholder="Digite sua duvida..."
             className="bg-transparent"
           />
           <button type="submit" disabled={loading}>
@@ -207,7 +207,7 @@ function App() {
             </svg>
           </button>
         </form>
-        <p className="text-sm text-bridgestone-black">© 2025 Bridgestone. Todos os direitos reservados.</p>
+        <p className="text-sm text-bridgestone-black">© 2025 Mosten/Bridgestone. Todos os direitos reservados.</p>
       </footer>
 
       {/* Adicionar o ToastContainer para renderizar as notificações */}
